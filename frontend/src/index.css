@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #070913;
+  color: #f1f5f9;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0f1f;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e294b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00f0ff88;
+}
+
+/* Striped pattern for Alpha-Beta bound columns */
+.bg-hatched-pattern {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1) 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(17, 23, 46, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-cyan {
+  background: rgba(11, 23, 44, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  box-shadow: 0 4px 24px -1px rgba(0, 240, 255, 0.12);
+}
+
+.glass-panel-amber {
+  background: rgba(30, 20, 25, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 112, 67, 0.25);
+  box-shadow: 0 4px 24px -1px rgba(255, 112, 67, 0.12);
+}
+
+/* Pulse animation for winning 4 discs */
+@keyframes winning-pulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 16px #fbbf24) brightness(1.2);
+  }
+  50% {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 28px #f59e0b) brightness(1.4);
+  }
+}
+
+.winning-disc-pulse {
+  animation: winning-pulse 1.2s infinite ease-in-out;
+  transform-origin: center center;
+}
+
+/* Subtle arcade background grid */
+.arcade-grid-bg {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}

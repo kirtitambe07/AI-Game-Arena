@@ -1,0 +1,35 @@
+﻿# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python generated files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Node.js dependencies and build output
+node_modules/
+dist/
+coverage/
+
+# Local databases and backups
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# Private keys
+*.pem
+*.key
+
+# Logs
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+README-local-backup.md
